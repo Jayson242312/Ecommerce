@@ -13,76 +13,121 @@
 
 
 
-header {
+body {
+
+}
+
+.backgroundnavAndHero{
   background-color: #333;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1616464504913-811f414de4d5?q=80&w=2572&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Logo Styles */
-.logo img {
-  max-width: 150px; /* Adjust the maximum width as needed */
-  height: auto;
-  border-radius: 5px; /* Optional: Add border radius for a rounded look */
-}
-
-/* Navigation Styles */
-.navbar ul {
+li{
   list-style-type: none;
-  display: flex;
 }
 
-.navbar ul li {
-  margin-right: 20px;
-}
-
-.navbar a {
+a{
   text-decoration: none;
   color: white;
+  font-size: 1rem;
+}
+
+a:hover{
+  color: orange;
+}
+
+
+header{
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar{
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img{
+  width: 100px;
+}
+
+.navbar .logo a{
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Login Button Styles */
-.login-button {
-  background-color: #4CAF50;
+.navbar .links{
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle-btn{
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  font-size: 1.5rem;
   cursor: pointer;
+  display:none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  background-color: #ff5722; /* Set your desired button color */
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff8a65; /* Change color on hover */
+}
+
+
+.action_btn{
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.login-button:hover {
-  background-color: #45a049;
+.action_btn:hover{
+  scale: 1.05;
+  color: white;
 }
 
-
-body, h1, h2, h3, p, ul, li, form {
-  margin: 0;
-  padding: 0;
+.action_btn:active{
+  scale: 0.95;
 }
-
-body {
-  font-family: 'Arial', sans-serif;
-}
-
-
-
-
 /* Hero Section Styles */
 .hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 50px;
-  background-color: #eee;
+  color: white;
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
@@ -203,4 +248,59 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);;
+  border-radius:10px ;
+  overflow: auto;
+}
+
+.dropdown_menu.open{
+  height: 240px;
+}
+.dropdown_menu li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width:992px){
+  .navbar .links,
+  .navbar .action_btn{
+    display: none;
+  }
+
+  .navbar .toggle-btn{
+    display: block;
+
+  }
+
+  .dropdown_menu{
+    display: block;
+  }
+}
+
+@media(max-width:576px){
+  .dropdown_menu{
+    left:2rem;
+    width: unset;
+  }
+
 }
