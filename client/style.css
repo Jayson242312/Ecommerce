@@ -221,6 +221,8 @@ button:hover {
 .beats {
   text-align: center;
   padding: 50px;
+  background: linear-gradient(180deg, #443e37, #3b3630, #322e29, #292622, #201e1b, #181615, #0f0d0c, #000000);
+  color: white;
 }
 
 .beat {
@@ -228,6 +230,7 @@ button:hover {
   width: 300px;
   margin: 20px;
   padding: 20px;
+  background: linear-gradient(180deg, #443e37, #3b3630, #322e29, #292622, #201e1b, #181615, #0f0d0c, #000000);
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -279,6 +282,22 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+
+.track{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.track i{
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.track div{
+  flex: 1;
 }
 
 @media(max-width:992px){

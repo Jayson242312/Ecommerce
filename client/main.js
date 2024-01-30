@@ -1,3 +1,12 @@
+import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+
+
+const wavesurfer = WaveSurfer.create({
+  container: '#waveform',
+  waveColor: '#4F4A85',
+  progressColor: '#383351',
+  url: '/audio.mp3',
+})
 
 const toggleBtn= document.querySelector('.toggle-btn');
 const toggleBtnIcon= document.querySelector('.toggle-btn i');
@@ -19,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "genre":" Jazz", 
         "image":"https://picsum.photos/seed/picsum/200/300",
         "bpm": 120,
-        "preview": "https://essentials.pixfort.com/original/wp-content/uploads/sites/4/2020/02/skanews.wav"
+        "preview": "/images/skanews.wav"
       },
       {
         "id": 2,
@@ -27,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "genre":" Rock", 
         "image":"https://picsum.photos/seed/picsum/200/300",
         "bpm": 128,
-        "preview": "https://essentials.pixfort.com/original/wp-content/uploads/sites/4/2020/02/skanews.wav"
+        "preview": "/images/skanews.wav"
       },
       {
         "id": 3,
@@ -35,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "genre":" Pop", 
         "image":"https://picsum.photos/seed/picsum/200/300",
         "bpm": 90,
-        "preview": "https://essentials.pixfort.com/original/wp-content/uploads/sites/4/2020/02/skanews.wav"
+        "preview": "/images/skanews.wav"
       },
       {
         "id": 4,
@@ -43,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "genre":" Jazz", 
         "image":"https://picsum.photos/seed/picsum/200/300",
         "bpm": 140,
-        "preview": "https://essentials.pixfort.com/original/wp-content/uploads/sites/4/2020/02/skanews.wav"
+        "preview": "/images/skanews.wav"
       },
       {
         "id": 5,
@@ -51,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "genre":" Jazz", 
         "image":"https://picsum.photos/seed/picsum/200/300",
         "bpm": 95,
-        "preview": "https://essentials.pixfort.com/original/wp-content/uploads/sites/4/2020/02/skanews.wav"
+        "preview": "/images/skanews.wav"
       }
     ]
   };
@@ -70,11 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>BPM: ${beat.bpm}</p>
       <img src="${beat.image}" alt="Beat image">
       <p>Genre: ${beat.genre}</p>
-      <audio controls>
-        <source src="${beat.preview}" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
+      <div class="track">
+      <i class="fa-solid fa-play"></i>  
+      <div id="waveform"></div>
+      </div>
     `;
+
+
 
     // Append the beat element to the container
     beatsContainer.appendChild(beatElement);
