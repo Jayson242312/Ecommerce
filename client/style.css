@@ -19,11 +19,12 @@ body {
 
 .backgroundnavAndHero{
   background-color: #333;
-  background-image: url('https://images.unsplash.com/photo-1616464504913-811f414de4d5?q=80&w=2572&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image:url('https://images.unsplash.com/photo-1511025998370-7d59f82e9c8f?q=80&w=2653&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 40vh;
+  background-color: white;
   overflow: hidden;
 }
 
@@ -33,7 +34,7 @@ li{
 
 a{
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 1rem;
 }
 
@@ -58,7 +59,9 @@ header{
 }
 
 .logo img{
+  padding-top: 18px;
   width: 100px;
+  height: 100px;
 }
 
 .navbar .logo a{
@@ -116,13 +119,13 @@ header{
 }
 /* Hero Section Styles */
 .hero {
-  height: calc(100vh - 60px);
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .hero h1 {
@@ -216,13 +219,20 @@ button:hover {
   background-color: #555;
 }
 
+.beats h2{
+  color: black;
+}
 
 
 .beats {
   text-align: center;
+  color: black;
   padding: 50px;
-  background: linear-gradient(180deg, #443e37, #3b3630, #322e29, #292622, #201e1b, #181615, #0f0d0c, #000000);
-  color: white;
+  background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),linear-gradient(309deg, rgba(90, 90, 90,0.05) 0%, rgba(90, 90, 90,0.05) 50%,rgba(206, 206, 206,0.05) 50%, rgba(206, 206, 206,0.05) 100%),linear-gradient(39deg, rgba(13, 13, 13,0.05) 0%, rgba(13, 13, 13,0.05) 50%,rgba(189, 189, 189,0.05) 50%, rgba(189, 189, 189,0.05) 100%),linear-gradient(144deg, rgba(249, 249, 249,0.05) 0%, rgba(249, 249, 249,0.05) 50%,rgba(111, 111, 111,0.05) 50%, rgba(111, 111, 111,0.05) 100%),linear-gradient(166deg, rgba(231, 231, 231,0.05) 0%, rgba(231, 231, 231,0.05) 50%,rgba(220, 220, 220,0.05) 50%, rgba(220, 220, 220,0.05) 100%),linear-gradient(212deg, rgba(80, 80, 80,0.05) 0%, rgba(80, 80, 80,0.05) 50%,rgba(243, 243, 243,0.05) 50%, rgba(243, 243, 243,0.05) 100%),radial-gradient(circle at center center, hsl(107,19%,100%),hsl(107,19%,100%));  color: white;
+}
+
+.beats h3,p{
+  color: black;
 }
 
 .beat {
@@ -230,14 +240,14 @@ button:hover {
   width: 300px;
   margin: 20px;
   padding: 20px;
-  background: linear-gradient(180deg, #443e37, #3b3630, #322e29, #292622, #201e1b, #181615, #0f0d0c, #000000);
+  background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),linear-gradient(309deg, rgba(90, 90, 90,0.05) 0%, rgba(90, 90, 90,0.05) 50%,rgba(206, 206, 206,0.05) 50%, rgba(206, 206, 206,0.05) 100%),linear-gradient(39deg, rgba(13, 13, 13,0.05) 0%, rgba(13, 13, 13,0.05) 50%,rgba(189, 189, 189,0.05) 50%, rgba(189, 189, 189,0.05) 100%),linear-gradient(144deg, rgba(249, 249, 249,0.05) 0%, rgba(249, 249, 249,0.05) 50%,rgba(111, 111, 111,0.05) 50%, rgba(111, 111, 111,0.05) 100%),linear-gradient(166deg, rgba(231, 231, 231,0.05) 0%, rgba(231, 231, 231,0.05) 50%,rgba(220, 220, 220,0.05) 50%, rgba(220, 220, 220,0.05) 100%),linear-gradient(212deg, rgba(80, 80, 80,0.05) 0%, rgba(80, 80, 80,0.05) 50%,rgba(243, 243, 243,0.05) 50%, rgba(243, 243, 243,0.05) 100%),radial-gradient(circle at center center, hsl(107,19%,100%),hsl(107,19%,100%));  color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .beat img {
-  max-width: 100%;
+  max-width: 60%;
   border-radius: 5px;
   margin-bottom: 10px;
 }
